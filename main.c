@@ -237,16 +237,15 @@ void installAsar(){
   char buildName[32] = "\0";
   char asarPath[MAX_PATH] = "\0";
 
-  printf(">> Searching for Discord...\n");
   int result = findDiscord(asarPath, MAX_PATH);
 
   if (result != -1) {
     getBuildName(buildName, result, sizeof(buildName));
-    printf(">> Found %s%s%s - %s\n\n", BLUE, buildName, RESET, asarPath);
+    printf("%s%s%s - %s\n\n", BLUE, buildName, RESET, asarPath);
     
     installOpenAsar(asarPath);
   } else {
-    printf(">> No Discord installation found.\n");
+    printf("No Discord installation found.\n");
   }
 
   printf("\nPress any key to return...");
@@ -258,16 +257,16 @@ void uninstallAsar(){
   char buildName[32] = "\0";
   char asarPath[MAX_PATH] = "\0";
 
-  printf(">> Searching for Discord to Uninstall...\n");
+  printf("Searching for Discord to Uninstall...\n");
   int result = findDiscord(asarPath, MAX_PATH);
 
   if (result != -1) {
       getBuildName(buildName, result, sizeof(buildName));
-      printf(">> Found %s%s%s - %s\n\n", BLUE, buildName, RESET, asarPath);
+      printf("%s%s%s - %s\n\n", BLUE, buildName, RESET, asarPath);
 
       uninstallOpenAsar(asarPath);
   } else {
-      printf(">> No Discord installation found.\n");
+      printf("No Discord installation found.\n");
   }
 
   printf("\nPress any key to return...");
@@ -332,4 +331,5 @@ int main(void){
   }
 
   return 0;
+
 }
