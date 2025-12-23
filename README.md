@@ -7,6 +7,9 @@
 Install OpenAsar
 Uninstall OpenAsar
 
+# Compilation Command Used
+gcc -Wall -Werror -Wpedantic -fdiagnostics-color=always -g main.c -o utile.exe -lurlmon
+
 # TODO List
 - Close Discord automatically
 - Discord Custom Location
